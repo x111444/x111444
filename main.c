@@ -3,6 +3,7 @@
 
 int main()
 {
+ int a=0;
  printhello();
  printbye();
 //saasaaaaaa
