@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>만가지 물건 상점</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 본문에서는 다루지 않은 코드입니다. 부록 A에서 살펴보는 플러그인입니다. -->
+    <!--  구 버전의 인터넷 익스플로러에서 HTML5 태그를 인식하게 합니다. -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- 초기화 -->
+	<meta charset="utf-8"> 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"> 
+
+<script src="https://code.jquery.com/jquery-1.11.3.js"></script> 
+
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
+
+<script> 
+
+$(document).ready(function(){ 
+
+    var main = $('.bxslider').bxSlider({ 
+
+    mode: 'fade', 
+
+    auto: true,	//자동으로 슬라이드 
+
+    controls : true,	//좌우 화살표	
+
+    autoControls: true,	//stop,play 
+
+    pager:true,	//페이징 
+
+    pause: 3000, 
+
+    autoDelay: 0,	
+
+    slideWidth: 1000, //이미지 박스 크기설정
+
+    speed: 500, 
+
+    stopAutoOnclick:true 
+
+}); 
+
+   
+
+$(".bx-stop").click(function(){	// 중지버튼 눌렀을때 
+
+    main.stopAuto(); 
+
+    $(".bx-stop").hide(); 
+
+    $(".bx-start").show(); 
+
+    return false; 
+
+}); 
+
+
+
+$(".bx-start").click(function(){	//시작버튼 눌렀을때 
+
+    main.startAuto(); 
+
+    $(".bx-start").hide(); 
+
+    $(".bx-stop").show(); 
+
+    return false; 
+
+}); 
+
+
+
+  $(".bx-start").hide();	//onload시 시작버튼 숨김. 
+
+}); 
+
+</script> 
+
+    <style>
+        * { margin: 0; padding: 0; }
+        body { font-family: 'Helvetica', sans-serif; }
+        li { list-style: none; }
+        a { text-decoration: none; }
+    </style>
+    <!-- 헤더 -->
+    <style>
+        #main_header {
+            height: 60px;
+            line-height: 60px;
+            padding-left: 10px;
+            border-bottom: 1px solid black;
+
+            background: #FFFFFF;
+            color: rad;
+        }
+    </style>
+    <!-- 네비게이션 -->
+    <style>
+        #main_gnb {
+            overflow: hidden;
+            border-bottom: 1px solid black;
+            background: black;
+        }
+        #main_gnb > ul.left {
+            overflow: hidden;
+            float: left;
+        }
+        #main_gnb > ul.right {
+            overflow: hidden;
+            float: right;
+        }
+        #main_gnb > ul.left > li { float: left; }
+        #main_gnb > ul.right > li { float: left; }
+
+        /* a 태그 설정 */
+        #main_gnb a {
+            /* 레이아웃 설정 */
+            display: block;
+            padding: 10px 20px;
+
+            /* 색상 설정 */
+            border-left: 1px solid #5F6673;
+            border-right: 1px solid #242A37;
+            color: white;
+            font-weight: bold;
+        }
+        body { min-width: 760px; }
+    </style>
+    <!-- 콘텐츠 -->
+    <style>
+        #wrap { overflow: hidden; }
+        #wrap > #main_lnb { 
+            float: left;
+            width: 200px;
+        }
+        #wrap > #content_wrap {
+            float: left;
+            width: 100%;
+            *width: 99.9%;
+            margin-right: -200px;
+        }
+        #wrap > #content_wrap > #content { padding-right: 200px; }
+    </style>
+    <!-- 수직 목록 -->
+    <style>
+        #wrap { background: gray; }
+        #main_lnb > ul > li > a {
+            display: block;
+            height:40px; line-height: 40px;
+            padding-left: 15px;
+
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+    <!-- 본문 -->
+    <style>
+        #content {
+            background: white;
+            border-left: 1px solid black;
+        }
+        article { padding: 10px; }
+    </style>
+    <!-- 푸터 -->
+    <style>
+        #main_footer {
+            padding: 10px;
+            border-top: 3px solid black;
+            text-align: center;
+        }
+    </style>
+	
+</head>
+<body>
+    <header id="main_header">
+        <h1>만가지 물건 상점</h1>
+    </header>
+    <nav id="main_gnb">
+        <ul class="left">
+            <li><a href="#">home</a></li>
+            <li><a href="#">거래내역</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="#">로그인</a></li>
+            <li><a href="file:///C:/Users/%EC%8B%A0%EB%AA%85%EC%A4%80/Downloads/%EB%A7%8C%EA%B0%80%EC%A7%80%EB%AC%BC%EA%B1%B4%EA%B3%A0%EA%B0%9D.html">고객센터</a></li>
+        </ul>
+    </nav>
+    <div id="wrap">
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="#">신규상품</a></li>
+                <li><a href="#">top 100</a></li>
+                <li><a href="#">월간 베스트</a></li>
+                <li><a href="#">1000원 미만</a></li>
+                <li><a href="#">거액 제품</a></li>
+            </ul>
+        </nav>
+        <div id="content_wrap">
+            <div id="content">
+			
+			<article>
+			
+			<div class="home__slider"> 
+
+    <div class="bxslider"> 
+
+        <div><img src="http://mblogthumb2.phinf.naver.net/MjAxODA0MjRfNDkg/MDAxNTI0NTM2NjAwNTQw.IddxA8-dF1o5mTaOwiJqesGQwyEDYYXYiYKmdV-WSMUg.1Rm40HP8qmd2PMAVhm5cyKtlHeifbI2GSnT6FTOncJsg.JPEG.dmm_korea/%ED%92%8D%EA%B2%BD%EC%98%81%EC%96%B4%EB%A1%9C_%EC%97%94%EA%B5%AC%ED%99%94%EC%83%81%EC%98%81%EC%96%B41.jpg?type=w800" width="1000" height="600"></div>
+        <div><img src="http://news.xinhuanet.com/foto/2017-04/26/129575007_14931880312131n.jpg"  width="1000" height="600"></div> 
+        <div><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606"  width="1000" height="600"></div> 
+		<div><img src="http://news.xinhuanet.com/foto/2017-04/26/129575007_14931880312131n.jpg"  width="1000" height="600"></div> 
+		<div><img src="http://danmee.chosun.com/site/data/img_dir/2017/10/12/2017101200857_0.jpg"  width="1000" height="600"></div> 
+    </div> 
+
+</div> 
+			</article>
+                <article>
+                    <h1>신규상품</h1>
+                  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+                </article>
+                <article>
+                    <h1>top 100</h1>
+                   <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+                </article>
+                <article>
+                    <h1>월간 베스트</h1>
+                    <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+                </article>
+				<article>
+                    <h1>1000원 미만</h1>
+                    <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+                </article>
+				<article>
+                    <h1>거액 상품</h1>
+                    <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+				  <a href="https://comic.naver.com/webtoon/"><img src="https://t1.daumcdn.net/cfile/tistory/2563D03353095C2606" width="200" height="300" border="0"></a>
+                </article>
+            </div>
+        </div>
+    </div>
+    <footer id="main_footer">
+        <h3>만가지 물건 상점</h3>
+        <address>주소:xx시 xx동 xx번길 xx빌딩</address>
+    </footer>
+</body>
+</html>
